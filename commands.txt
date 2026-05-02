@@ -1,0 +1,42 @@
+cd Desktop\smart_delivery\backend
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+copy .env.example .env
+
+cd Desktop\smart_delivery\frontend
+npm install
+copy .env.example .env
+
+cd backend
+
+venv\Scripts\activate
+
+
+uvicorn main:app --reload --port 8000
+
+
+cd frontend
+
+npm run dev
+
+http://localhost:5173
+
+
+
+
+
+
+
+cd backend
+venv\Scripts\activate
+uvicorn main:app --reload --port 8000
+
+
+
+
+
+
+
+cd frontend
+npm run dev
